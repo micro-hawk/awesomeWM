@@ -112,7 +112,7 @@ local filemanager       = "thunar"
 local mailclient        = "geary"
 local mediaplayer       = "vlc"
 local scrlocker         = "i3lock-fancy"
-local terminal          = "terminator"
+local terminal          = "xfce4-terminal"
 local virtualmachine    = "virtualbox"
 
 -- awesome variables
@@ -307,7 +307,7 @@ globalkeys = my_table.join(
     awful.key({ modkey,  }, "e", function () awful.util.spawn( "thunar" ) end,
         {description = "Default File Manager" , group = "gui apps" }),
     
-    awful.key({ modkey, altkey }, "b", function () awful.util.spawn( "firefo" ) end,
+    awful.key({ modkey, altkey }, "b", function () awful.util.spawn( "firefox" ) end,
         {description = "surf web browser" , group = "gui apps" }),
 
     -- screenshots
@@ -770,8 +770,8 @@ awful.rules.rules = {
     -- Set applications to be maximized at startup.
     -- find class or role via xprop command
 
-    { rule = { class = editorgui },
-          properties = { maximized = true } },
+    -- { rule = { class = editorgui },
+    --       properties = { maximized = true } },
 
     { rule = { class = "Gimp*", role = "gimp-image-window" },
           properties = { maximized = true } },
@@ -779,11 +779,11 @@ awful.rules.rules = {
     { rule = { class = "inkscape" },
           properties = { maximized = true } },
 
-    { rule = { class = mediaplayer },
-          properties = { maximized = true } },
+    -- { rule = { class = mediaplayer },
+    --       properties = { maximized = true } },
 
-    { rule = { class = "Vlc" },
-          properties = { maximized = true } },
+    -- { rule = { class = "Vlc" },
+    --       properties = { maximized = true } },
 
     { rule = { class = "VirtualBox Manager" },
           properties = { maximized = true } },
@@ -927,5 +927,5 @@ awful.spawn.with_shell("compton")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("blueman-tray")
 awful.spawn.with_shell("volumeicon")
-awful.spawn.with_shell("redshift-gtk")
+-- awful.spawn.with_shell("redshift-gtk")
 -- awful.spawn.with_shell("Mod4 + b")
