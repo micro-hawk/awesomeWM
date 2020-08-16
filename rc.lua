@@ -63,7 +63,7 @@ do
         in_error = true
 
         naughty.notify({ preset = naughty.config.presets.critical,
-                         title = "Oops,MicroHawk an error happened!",
+                         title = "Oh :( ,MicroHawk an error happened!",
                          text = tostring(err) })
         in_error = false
     end)
