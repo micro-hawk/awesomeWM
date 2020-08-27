@@ -63,7 +63,7 @@ do
         in_error = true
 
         naughty.notify({ preset = naughty.config.presets.critical,
-                         title = "Oops,MicroHawk an error happened!",
+                         title = "Oh :( ,MicroHawk an error happened!",
                          text = tostring(err) })
         in_error = false
     end)
@@ -529,7 +529,7 @@ globalkeys = my_table.join(
     --awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
              -- {description = "select previous", group = "layout"}),
 
-    awful.key({ modkey, "Control" }, "n",
+    awful.key({ modkey, "Control" }, "d",
               function ()
                   local c = awful.client.restore()
                   -- Focus restored client
@@ -634,7 +634,7 @@ clientkeys = my_table.join(
               {description = "move to screen", group = "client"}),
     awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end,
               {description = "toggle keep on top", group = "client"}),
-    awful.key({ modkey,           }, "n",
+    awful.key({ modkey,           }, "d",
         function (c)
             -- The client currently has the input focus, so it cannot be
             -- minimized, since minimized clients can't have the focus.
