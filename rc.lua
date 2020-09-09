@@ -93,7 +93,7 @@ local themes = {
 }
 
 -- choose your theme here
-local chosen_theme = themes[1]
+local chosen_theme = themes[3]
 
 local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme)
 beautiful.init(theme_path)
@@ -112,7 +112,7 @@ local filemanager       = "thunar"
 local mailclient        = "geary"
 local mediaplayer       = "vlc"
 local scrlocker         = "i3lock-fancy"
-local terminal          = "xfce4-terminal"
+local terminal          = "xfce4-terminal --hide-menubar"
 local virtualmachine    = "virtualbox"
 
 -- awesome variables
@@ -923,10 +923,11 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Autostart applications
 awful.spawn.with_shell("nitrogen --restore")
-awful.spawn.with_shell("compton")
+awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("blueman-tray")
 awful.spawn.with_shell("volumeicon")
 -- awful.spawn.with_shell("redshift-gtk")
 -- awful.spawn.with_shell("Mod4 + b")
 awful.spawn.with_shell("xset r rate 400 97")
+
