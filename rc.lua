@@ -925,9 +925,10 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("blueman-tray")
+-- awful.spawn.with_shell("blueman-tray")
 awful.spawn.with_shell("volumeicon")
 -- awful.spawn.with_shell("redshift-gtk")
 -- awful.spawn.with_shell("Mod4 + b")
+awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("xset r rate 400 97")
 
