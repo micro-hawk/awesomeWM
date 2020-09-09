@@ -307,7 +307,7 @@ globalkeys = my_table.join(
     awful.key({ modkey,  }, "e", function () awful.util.spawn( "thunar" ) end,
         {description = "Default File Manager" , group = "gui apps" }),
     
-    awful.key({ modkey, altkey }, "b", function () awful.util.spawn( "firefox" ) end,
+    awful.key({ modkey, "Shift" }, "w", function () awful.util.spawn( "firefox" ) end,
         {description = "surf web browser" , group = "gui apps" }),
 
     -- screenshots
