@@ -307,6 +307,9 @@ globalkeys = my_table.join(
     --   awful.key({ modkey, "Shift"          }, "e", function () awful.spawn(ranger) end,
     --           {description = "Ranger", group = "Terminal Apps"}),
     
+    -- awful.key({modkey, }, "n", function() awful.util.spawn("nmtui") end,
+    --     {description="terminal app", group="gui apps"}),
+
     awful.key({ modkey,  }, "e", function () awful.util.spawn( "thunar" ) end,
         {description = "Default File Manager" , group = "gui apps" }),
     
