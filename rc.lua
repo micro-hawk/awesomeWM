@@ -20,7 +20,9 @@ local ipairs, string, os, table, tostring, tonumber, type = ipairs, string, os, 
 -- Standard awesome library
 local gears         = require("gears") --Utilities such as color parsing and objects
 local awful         = require("awful") --Everything related to window managment
-                      require("awful.autofocus")
+
+require("awful.autofocus")
+--require("collision")()
 -- Widget and layout library
 local wibox         = require("wibox")
 
@@ -112,7 +114,7 @@ local filemanager       = "thunar"
 local mailclient        = "geary"
 local mediaplayer       = "vlc"
 local scrlocker         = "i3lock-fancy"
-local terminal          = "xfce4-terminal --hide-menubar"
+local terminal          = "terminator"
 local virtualmachine    = "virtualbox"
 
 -- awesome variables
@@ -303,6 +305,8 @@ globalkeys = my_table.join(
      -- awful.key({ modkey, altkey }, "e", function () awful.util.spawn( "ranger" ) end,
       --{description = "terminal File manager" , group = "terminal apps" }),
     
+    --   awful.key({ modkey, "Shift"          }, "e", function () awful.spawn(ranger) end,
+    --           {description = "Ranger", group = "Terminal Apps"}),
     
     awful.key({ modkey,  }, "e", function () awful.util.spawn( "thunar" ) end,
         {description = "Default File Manager" , group = "gui apps" }),
