@@ -114,7 +114,7 @@ local filemanager       = "thunar"
 local mailclient        = "geary"
 local mediaplayer       = "vlc"
 local scrlocker         = "i3lock-fancy"
-local terminal          = "terminator"
+local terminal          = "st"
 local virtualmachine    = "virtualbox"
 
 -- awesome variables
@@ -266,7 +266,8 @@ globalkeys = my_table.join(
 
     -- {{{ Personal keybindings
     -- dmenu
-    awful.key({ modkey, "Shift" }, "Return",
+    -- awful.key({ modkey, "Shift" }, "Return",
+    awful.key({ modkey }, "x",
     function ()
         awful.spawn(string.format("dmenu_run",
         beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
