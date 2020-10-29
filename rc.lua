@@ -12,7 +12,7 @@ o8o        o888o o888o `Y8bod8P' d888b    `Y8bod8P' o888o   o888o `Y888""8o     
  
 --]]
 
--- {{{  libraries
+-- {{{  Libraries
 local awesome, client, mouse, screen, tag = awesome, client, mouse, screen, tag
 local ipairs, string, os, table, tostring, tonumber, type = ipairs, string, os, table, tostring, tonumber, type
 
@@ -94,7 +94,7 @@ local themes = {
 
 }
 
--- choose your theme here
+-- Choose your theme here
 local chosen_theme = themes[3]
 
 local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme)
