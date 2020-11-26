@@ -20,7 +20,8 @@ theme.font                                      = "Noto Sans Regular 11"
 theme.taglist_font                              = "Noto Sans Regular 13"
 theme.menu_bg_normal                            = "#000000"
 theme.menu_bg_focus                             = "#000000"
-theme.bg_normal                                 = "#000000"
+theme.bg_normal                                 = "#000"
+-- theme.bg_normal                                 = "#000"
 theme.bg_focus                                  = "#000000"
 theme.bg_urgent                                 = "#000000"
 theme.fg_normal                                 = "#aaaaaa"
@@ -58,7 +59,7 @@ theme.taglist_squares_sel                       = theme.confdir .. "/icons/squar
 theme.taglist_squares_unsel                     = theme.confdir .. "/icons/square_b.png"
 theme.tasklist_plain_task_name                  = true
 theme.tasklist_disable_icon                     = true
-theme.useless_gap                               = 4
+theme.useless_gap                               = 2
 theme.layout_tile                               = theme.confdir .. "/icons/tile.png"
 theme.layout_tilegaps                           = theme.confdir .. "/icons/tilegaps.png"
 theme.layout_tileleft                           = theme.confdir .. "/icons/tileleft.png"
@@ -291,7 +292,7 @@ function theme.at_screen_connect(s)
     s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons)
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 20, bg = theme.bg_normal, fg = theme.fg_normal })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 18, bg = theme.bg_normal, fg = theme.fg_normal })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -311,20 +312,20 @@ function theme.at_screen_connect(s)
             --mail.widget,
             mpdicon,
             theme.mpd.widget,
-            netdownicon,
-            netdowninfo,
-            netupicon,
-            netupinfo.widget,
+            -- netdownicon,
+            -- netdowninfo,
+            -- netupicon,
+            -- netupinfo.widget,
             volicon,
             theme.volume.widget,
             memicon,
             memory.widget,
-            cpuicon,
-            cpu.widget,
-            weathericon,
-            theme.weather.widget,
-            tempicon,
-            temp.widget,
+            -- cpuicon,
+            -- cpu.widget,
+            -- weathericon,
+            -- theme.weather.widget,
+            -- tempicon,
+            -- temp.widget,
             baticon,
             bat.widget,
             clockicon,
@@ -334,7 +335,7 @@ function theme.at_screen_connect(s)
     }
 
     -- Create the bottom wibox
-    s.mybottomwibox = awful.wibar({ position = "bottom", screen = s, border_width = 0, height = 20, bg = theme.bg_normal, fg = theme.fg_normal })
+    s.mybottomwibox = awful.wibar({ position = "bottom", screen = s, border_width = 0, height = 18, bg = theme.bg_normal, fg = theme.fg_normal })
 
     -- Add widgets to the bottom wibox
     s.mybottomwibox:setup {
