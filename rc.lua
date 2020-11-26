@@ -110,7 +110,7 @@ local modkey1      = "Control"
 local browser           = "firefox"
 local editor            = os.getenv("EDITOR") or "nano"
 local editorgui         = "code"
-local filemanager       = "thunar"
+local filemanager       = "pcmanfm"
 local mailclient        = "geary"
 local mediaplayer       = "vlc"
 local scrlocker         = "i3lock-fancy"
@@ -311,7 +311,7 @@ globalkeys = my_table.join(
     -- awful.key({modkey, }, "n", function() awful.util.spawn("nmtui") end,
     --     {description="terminal app", group="gui apps"}),
 
-    awful.key({ modkey,  }, "e", function () awful.util.spawn( "thunar" ) end,
+    awful.key({ modkey,  }, "e", function () awful.util.spawn( "pcmanfm" ) end,
         {description = "Default File Manager" , group = "gui apps" }),
     
     awful.key({ modkey, "Shift" }, "w", function () awful.util.spawn( "firefox" ) end,
