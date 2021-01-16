@@ -26,7 +26,7 @@ Awesome is a highly configurable, tiling window manager for X. It is very fast, 
 
 # Additional tools for Customizing it.
 
-* sudo pacman -S lxappearance compton nitrogen
+* sudo pacman -S lxappearance picom nitrogen
 
 # My Keybindings
 
