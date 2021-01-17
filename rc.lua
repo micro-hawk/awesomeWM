@@ -119,7 +119,7 @@ local virtualmachine    = "virtualbox"
 
 -- awesome variables
 awful.util.terminal = terminal
-awful.util.tagnames = { " α", " β", " γ", " δ", " φ" }
+awful.util.tagnames = {" α", " β", " γ", " δ", " φ" }
 -- awful.util.tagnames = { " 1 ", " 2 ", " 3 ", " 4 ", "5"}
 awful.layout.suit.tile.left.mirror = true
 awful.layout.layouts = {
