@@ -2,6 +2,7 @@
 
 ## NOTE: It is fully tested on ARCH LINUX by MICROHAWK.
 
+![Screenshot of my desktop](/screenshots/powerarrow-dark.png)
 ![Screenshot of my desktop](/screenshots/.img1.png)
 ![Screenshot of my desktop](/screenshots/.img2.png)
 ![Screenshot of my desktop](/screenshots/.img3.png)
