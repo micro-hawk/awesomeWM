@@ -18,7 +18,8 @@ theme.fg_urgent                                 = "#CC9393"
 theme.bg_normal                                 = "#031319"
 -- theme.bg_normal                                 = "#1A1A1A"
 
-theme.bg_focus                                  = "#313131"
+theme.bg_focus                                  = "#ee0823"
+-- theme.bg_focus                                  = "#313131"
 theme.bg_urgent                                 = "#031319"
 -- theme.bg_urgent                                 = "#1A1A1A"
 

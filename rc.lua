@@ -91,7 +91,7 @@ local themes = {
     "powerarrow-blue", -- 1
     "powerarrow",      -- 2
     "multicolor",      -- 3
-    "powerarrow-dark", -- 4
+    "powerarrow-dark",      -- 4
 }
 
 -- Choose your theme here
