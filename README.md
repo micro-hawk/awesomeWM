@@ -23,8 +23,8 @@ Awesome is a highly configurable, tiling window manager for X. It is very fast, 
 
 # Installation
 
-* sudo pacman -S awesome dmenu thunar firefox terminator
-* yay -S i3lock-fancy-git 
+* sudo pacman -S awesome dmenu thunar chromium 
+* paru -S i3lock-fancy-git st-distrotube-git
 
 # Additional tools for Customizing it.
 
