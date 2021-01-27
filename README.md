@@ -2,9 +2,10 @@
 
 ## NOTE: It is fully tested on ARCH LINUX by MICROHAWK.
 
-![Screenshot of my desktop](/screenshots/powerarrow-dark.png)
+### My personal fav powerarrow-dark
+![Screenshot of my desktop](/screenshots/.powerarrow-dark.png)
+
 ![Screenshot of my desktop](/screenshots/.img1.png)
-![Screenshot of my desktop](/screenshots/.img2.png)
 ![Screenshot of my desktop](/screenshots/.img3.png)
 ![Screenshot of my desktop](/screenshots/.img4.png)
 ![Screenshot of my desktop](/screenshots/.img5.png)
@@ -22,8 +23,8 @@ Awesome is a highly configurable, tiling window manager for X. It is very fast, 
 
 # Installation
 
-* sudo pacman -S awesome dmenu thunar firefox terminator
-* yay -S i3lock-fancy-git 
+* sudo pacman -S awesome dmenu thunar chromium 
+* paru -S i3lock-fancy-git st-distrotube-git
 
 # Additional tools for Customizing it.
 
