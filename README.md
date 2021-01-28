@@ -3,7 +3,7 @@
 ## NOTE: It is fully tested on ARCH LINUX by MICROHAWK.
 
 ### My personal fav powerarrow-dark
-![Screenshot of my desktop](/screenshots/.powerarrow-dark.png)
+
 
 ![Screenshot of my desktop](/screenshots/.img1.png)
 ![Screenshot of my desktop](/screenshots/.img3.png)
