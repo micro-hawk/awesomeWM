@@ -2,7 +2,8 @@
 
 ## NOTE: It is fully tested on ARCH LINUX by MICROHAWK.
 
-### My personal fav powerarrow-dark
+![Screenshot of my desktop](/screenshots/.img0.png)
+### <<<<<<<<<< My personal fav powerarrow-dark >>>>>>>>>>
 
 
 ![Screenshot of my desktop](/screenshots/.img1.png)
