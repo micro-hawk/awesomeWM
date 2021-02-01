@@ -17,7 +17,7 @@ theme.fg_focus                                  = "#EA6F81"
 theme.fg_urgent                                 = "#CC9393"
 theme.bg_normal                                 = "#031319"
 -- theme.bg_normal                                 = "#1A1A1A"
-
+theme.temp_color    = "#000"
 theme.bg_focus                                  = "#ee0823"
 -- theme.bg_focus                                  = "#313131"
 theme.bg_urgent                                 = "#031319"
@@ -309,7 +309,7 @@ function theme.at_screen_connect(s)
     s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons)
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "bottom", screen = s, height = dpi(18), bg = theme.bg_normal, fg = theme.fg_normal })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(18), bg = theme.bg_normal, fg = theme.fg_normal })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -367,7 +367,9 @@ function theme.at_screen_connect(s)
             clock,
             spr,
             arrl_ld,
-            wibox.container.background(s.mylayoutbox, theme.bg_focus),
+            arrl_dl,
+            -- wibox.container.background(s.mylayoutbox, theme.bg_focus),
+            wibox.container.background(s.mylayoutbox, theme.temp_color),
         },
     }
 end
