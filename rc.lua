@@ -92,10 +92,11 @@ local themes = {
     "powerarrow",      -- 2
     "multicolor",      -- 3
     "powerarrow-dark",      -- 4
+    "pro-arrow",    --5
 }
 
 -- Choose your theme here
-local chosen_theme = themes[4]
+local chosen_theme = themes[5]
 
 local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme)
 beautiful.init(theme_path)
@@ -114,8 +115,7 @@ local filemanager       = "thunar"
 local mailclient        = "geary"
 local mediaplayer       = "vlc"
 local scrlocker         = "i3lock-fancy"
--- local terminal          = "st -f consolas"
-local terminal = "terminator"
+local terminal          = "st -f consolas"
 local virtualmachine    = "virtualbox"
 
 -- awesome variables
