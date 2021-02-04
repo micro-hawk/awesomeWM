@@ -114,7 +114,8 @@ local filemanager       = "thunar"
 local mailclient        = "geary"
 local mediaplayer       = "vlc"
 local scrlocker         = "i3lock-fancy"
-local terminal          = "st -f consolas"
+-- local terminal          = "st -f consolas"
+local terminal = "terminator"
 local virtualmachine    = "virtualbox"
 
 -- awesome variables

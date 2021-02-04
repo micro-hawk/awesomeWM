@@ -15,23 +15,23 @@ theme.font                                      = "monaco 9"
 theme.fg_normal                                 = "#DDDDFF"
 theme.fg_focus                                  = "#EA6F81"
 theme.fg_urgent                                 = "#CC9393"
-theme.bg_normal                                 = "#031319"
+theme.bg_normal                                 = "#272822"         --Layout Taskbar
 -- theme.bg_normal                                 = "#1A1A1A"
-theme.temp_color    = "#031319"        -- LayoutBox Color due to crimson overlay
-theme.bg_focus                                  = "#ee0823"
+theme.temp_color    = "#272822"        -- LayoutBox Color due to crimson overlay
+theme.bg_focus                                  = "#272822"    -- TagList overlay color
 -- theme.bg_focus                                  = "#313131"
-theme.bg_urgent                                 = "#031319"
+theme.bg_urgent                                 = "#272822"
 -- theme.bg_urgent                                 = "#1A1A1A"
 
 
 -- theme.border_width                              = dpi(2)
 theme.border_width                              = 2
 theme.border_normal                             = "#3F3F3F"
--- theme.border_normal                             = "#031319"
+-- theme.border_normal                             = "#272822"
 -- theme.border_focus                              = "#7F7F7F"
 theme.border_focus                              = "#CC9393"
 theme.border_marked                             = "#CC9393"
-theme.tasklist_bg_focus                         = "#031319"
+theme.tasklist_bg_focus                         = "#272822"
 -- theme.tasklist_bg_focus                         = "#1A1A1A"
 
 theme.titlebar_bg_focus                         = theme.bg_focus
@@ -328,46 +328,46 @@ function theme.at_screen_connect(s)
             -- keyboardlayout,
             spr,
             
-            arrl_ld,
+            -- arrl_ld,
             -- wibox.container.background(mpdicon, theme.bg_focus),
             -- wibox.container.background(theme.mpd.widget, theme.bg_focus),
-            arrl_dl,
-            arrl_ld,
-            arrl_dl,
-            arrl_ld,
-            arrl_dl,
+            -- arrl_dl,
+            -- arrl_ld,
+            -- arrl_dl,
+            -- arrl_ld,
+            -- arrl_dl,
             volicon,
             theme.volume.widget,
-            arrl_ld,
+            -- arrl_ld,
             -- wibox.container.background(mailicon, theme.bg_focus),
             --wibox.container.background(theme.mail.widget, theme.bg_focus),
-            arrl_dl,
+            -- arrl_dl,
             -- memicon,
             -- mem.widget,
-            arrl_ld,
+            -- arrl_ld,
             -- wibox.container.background(cpuicon, theme.bg_focus),
             -- wibox.container.background(cpu.widget, theme.bg_focus),
-            arrl_dl,
+            -- arrl_dl,
             -- tempicon,
             -- temp.widget,
-            arrl_ld,
+            -- arrl_ld,
             -- wibox.container.background(fsicon, theme.bg_focus),
             --wibox.container.background(theme.fs.widget, theme.bg_focus),
-            arrl_dl,
+            -- arrl_dl,
             baticon,
             bat.widget,
-            arrl_ld,
+            -- arrl_ld,
             -- wibox.container.background(neticon, theme.bg_focus),
             -- wibox.container.background(net.widget, theme.bg_focus),
-            arrl_dl,
-            arrl_ld,
-            arrl_dl,
-            arrl_ld,
-            arrl_dl,
+            -- arrl_dl,
+            -- arrl_ld,
+            -- arrl_dl,
+            -- arrl_ld,
+            -- arrl_dl,
             clock,
             spr,
-            arrl_ld,
-            arrl_dl,
+            -- arrl_ld,
+            -- arrl_dl,
             -- wibox.container.background(s.mylayoutbox, theme.bg_focus),
             wibox.container.background(s.mylayoutbox, theme.temp_color),
         },
