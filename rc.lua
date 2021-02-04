@@ -96,7 +96,7 @@ local themes = {
 }
 
 -- Choose your theme here
-local chosen_theme = themes[5]
+local chosen_theme = themes[4]
 
 local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme)
 beautiful.init(theme_path)
