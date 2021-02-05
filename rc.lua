@@ -120,7 +120,8 @@ local virtualmachine    = "virtualbox"
 
 -- awesome variables
 awful.util.terminal = terminal
-awful.util.tagnames = {" ⸨", " ⧩", " ⚡", " ⧨", " ⸩" }
+-- awful.util.tagnames = {" ⸨", " ⧩", " ⚡", " ⧨", " ⸩" }
+awful.util.tagnames = {" α  👻", " β  💀", " γ  🧠", " δ  👾", " ζ  🙀" }
 -- awful.util.tagnames = { " 1", " 2", " 3", " 4", " 5"}
 awful.layout.suit.tile.left.mirror = true
 awful.layout.layouts = {
