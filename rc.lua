@@ -939,4 +939,4 @@ awful.spawn.with_shell("redshift -t 5700:4500")
 -- awful.spawn.with_shell("Mod4 + b")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("xset r rate 400 97")
-
+awful.spawn.with_shell("libinput-gestures-setup start")
