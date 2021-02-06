@@ -10,7 +10,7 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-dark"
-theme.wallpaper                                 = theme.dir .. "/wall.jpg"
+theme.wallpaper                                 = theme.dir .. "/wall.png"
 theme.font                                      = "Terminus 12"
 theme.fg_normal                                 = "#DDDDFF"
 theme.fg_focus                                  = "#EA6F81"
