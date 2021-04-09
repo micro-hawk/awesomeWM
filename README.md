@@ -38,11 +38,11 @@ keybindings consistent with all of my window managers.
 
 | Keybinding | Action |
 | :--- | :--- |
-| `MODKEY + RETURN` | opens terminal (alacritty is the terminal but can be easily changed) |
-| `MODKEY + SHIFT + RETURN` | opens run launcher (dmenu is the run launcher but can be easily changed) |
+| `MODKEY + RETURN` | opens terminal (ST is the terminal but can be easily changed) |
+| `MODKEY + x` | opens run launcher (dmenu is the run launcher but can be easily changed) |
 | `MODKEY + SHIFT + c` | closes window with focus |
 | `MODKEY + SHIFT + r` | restarts awesome |
-| `MODKEY + SHIFT + q` | quits awesome |
+| `MODKEY + CTRL + q` | quits awesome |
 | `MODKEY + 1-9` | switch focus to workspace (1-9) |
 | `MODKEY + SHIFT + 1-9` | send focused window to workspace (1-9) |
 | `MODKEY + j` | switches focus between windows in the stack, going down |
@@ -55,6 +55,12 @@ keybindings consistent with all of my window managers.
 | `MODKEY + SHIFT + l` | rotates the windows in the stack, going right |
 | `MODKEY + period` | switch focus to next monitor |
 | `MODKEY + comma` | switch focus to prev monitor |
+| `MODKEY + SHIFT + w` | opens default web-browser |
+| `MODKEY + d` | minimize current window  |
+| `MODKEY + CTRL + d` | restore recent minimize window |
+
+
+
 
 ## Getting Help With Awesome
 
