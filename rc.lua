@@ -108,7 +108,7 @@ local modkey1      = "Control"
 
 -- personal variables
 --change these variables if you want
-local browser           = "chromium"
+local browser           = "google-chrome-stable"
 local editor            = os.getenv("EDITOR") or "nano"
 local editorgui         = "code"
 local filemanager       = "pcmanfm"
@@ -316,7 +316,7 @@ globalkeys = my_table.join(
     awful.key({ modkey,  }, "e", function () awful.util.spawn( "pcmanfm" ) end,
         {description = "Default File Manager" , group = "gui apps" }),
     
-    awful.key({ modkey, "Shift" }, "w", function () awful.util.spawn( "chromium" ) end,
+    awful.key({ modkey, "Shift" }, "w", function () awful.util.spawn( "google-chrome-stable" ) end,
         {description = "surf web browser" , group = "gui apps" }),
 
     -- screenshots
