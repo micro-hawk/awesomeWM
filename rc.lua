@@ -108,14 +108,14 @@ local modkey1      = "Control"
 
 -- personal variables
 --change these variables if you want
-local browser           = "google-chrome-stable"
+local browser           = "firefox"
 local editor            = os.getenv("EDITOR") or "nano"
 local editorgui         = "code"
 local filemanager       = "pcmanfm"
 local mailclient        = "geary"
 local mediaplayer       = "vlc"
 local scrlocker         = "i3lock-fancy"
-local terminal          = "st -f consolas"
+local terminal          = "st"
 local virtualmachine    = "virtualbox"
 
 -- awesome variables
@@ -316,7 +316,7 @@ globalkeys = my_table.join(
     awful.key({ modkey,  }, "e", function () awful.util.spawn( "pcmanfm" ) end,
         {description = "Default File Manager" , group = "gui apps" }),
     
-    awful.key({ modkey, "Shift" }, "w", function () awful.util.spawn( "google-chrome-stable" ) end,
+    awful.key({ modkey, "Shift" }, "w", function () awful.util.spawn( "firefox" ) end,
         {description = "surf web browser" , group = "gui apps" }),
 
     -- screenshots
@@ -554,10 +554,10 @@ globalkeys = my_table.join(
               {description = "dropdown application", group = "super"}),
 
     -- Widgets popups
-    awful.key({ altkey, }, "c", function () lain.widget.calendar.show(7) end,
-              {description = "show calendar", group = "widgets"}),
-    awful.key({ altkey, }, "h", function () if beautiful.fs then beautiful.fs.show(7) end end,
-              {description = "show filesystem", group = "widgets"}),
+    -- awful.key({ altkey, }, "c", function () lain.widget.calendar.show(7) end,
+    --           {description = "show calendar", group = "widgets"}),
+    -- awful.key({ altkey, }, "h", function () if beautiful.fs then beautiful.fs.show(7) end end,
+    --           {description = "show filesystem", group = "widgets"}),
     --awful.key({ altkey, }, "w", function () if beautiful.weather then beautiful.weather.show(7) end end,
               --{description = "show weather", group = "widgets"}),
 
