@@ -115,7 +115,7 @@ local filemanager       = "pcmanfm"
 local mailclient        = "geary"
 local mediaplayer       = "vlc"
 local scrlocker         = "i3lock-fancy"
-local terminal          = "st"
+local terminal          = "st -f consolas"
 local virtualmachine    = "virtualbox"
 
 -- awesome variables
