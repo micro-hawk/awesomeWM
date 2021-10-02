@@ -108,10 +108,10 @@ local modkey1      = "Control"
 
 -- personal variables
 --change these variables if you want
-local browser           = "firefox"
+local browser           = "brave"
 local editor            = os.getenv("EDITOR") or "nano"
 local editorgui         = "code"
-local filemanager       = "pcmanfm"
+local filemanager       = "thunar"
 local mailclient        = "geary"
 local mediaplayer       = "vlc"
 local scrlocker         = "i3lock-fancy"
@@ -313,10 +313,10 @@ globalkeys = my_table.join(
     -- awful.key({modkey, }, "n", function() awful.util.spawn("nmtui") end,
     --     {description="terminal app", group="gui apps"}),
 
-    awful.key({ modkey,  }, "e", function () awful.util.spawn( "pcmanfm" ) end,
+    awful.key({ modkey,  }, "e", function () awful.util.spawn( "thunar" ) end,
         {description = "Default File Manager" , group = "gui apps" }),
     
-    awful.key({ modkey, "Shift" }, "w", function () awful.util.spawn( "firefox" ) end,
+    awful.key({ modkey, "Shift" }, "w", function () awful.util.spawn( "brave" ) end,
         {description = "surf web browser" , group = "gui apps" }),
 
     -- screenshots
@@ -853,6 +853,10 @@ client.connect_signal("manage", function (c)
     -- i.e. put it at the end of others instead of setting it master.
     -- if not awesome.startup then awful.client.setslave(c) end
 
+    c.shape = function(cr,w,h)
+        gears.shape.rounded_rect(cr,w,h,5)
+    end
+
     if awesome.startup and
       not c.size_hints.user_position
       and not c.size_hints.program_position then
@@ -940,3 +944,5 @@ awful.spawn.with_shell("volumeicon")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("xset r rate 400 97")
 --awful.spawn.with_shell("libinput-gestures-setup start")
+--
+--
