@@ -120,8 +120,9 @@ local virtualmachine    = "virtualbox"
 
 -- awesome variables
 awful.util.terminal = terminal
--- awful.util.tagnames = {" ⸨", " ⧩", " ⚡", " ⧨", " ⸩" }
-awful.util.tagnames = {" α  👻", " β  💀", " γ  🧠", " δ  👾", " ζ  🙀" }
+-- awful.util.tagnames = {" 💩", " 👻", " 💀", " 👽", " ☠️" }
+awful.util.tagnames = {" ◉", " ◉", " ◉", " ◉", " ◉" }
+-- awful.util.tagnames = {" α  👻", " β  💀", " γ  🧠", " δ  👾", " ζ  🙀" }
 -- awful.util.tagnames = { " 1", " 2", " 3", " 4", " 5"}
 awful.layout.suit.tile.left.mirror = true
 awful.layout.layouts = {
@@ -269,12 +270,12 @@ globalkeys = my_table.join(
     -- {{{ Personal keybindings
     -- dmenu
     -- awful.key({ modkey, "Shift" }, "Return",
-    awful.key({ modkey }, "x",
-    function ()
-        awful.spawn(string.format("dmenu_run -sb crimson -fn consolas",
-        beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
-	end,
-    {description = "show dmenu", group = "hotkeys"}),
+    -- awful.key({ modkey }, "x",
+    -- function ()
+    --     awful.spawn(string.format("dmenu_run -sb crimson -fn consolas",
+    --     beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
+	-- end,
+    -- {description = "show dmenu", group = "hotkeys"}),
    
      
 --    --ROFI command::
@@ -286,6 +287,21 @@ globalkeys = my_table.join(
 
 --    awful.key({ modkey, Shift }, "s", function () awful.util.spawn( "rofi -show" ) end,
 --    {description = "surf web browser" , group = "gui apps" }),
+        awful.key({ modkey }, "x",
+        function ()
+            os.execute("sh ~/.config/rofi/launchers/colorful/launcher.sh")
+            
+        end,
+        {description = "show dmenu", group = "hotkeys"}),
+
+        awful.key(
+            {modkey, "Shift"},
+                's',
+            function()
+                os.execute("sh ~/.config/rofi/launchers/slate/launcher.sh")
+            end,
+                    {description = 'Lock the screen', group = 'awesome'}
+                ),
     
     
     
@@ -320,12 +336,12 @@ globalkeys = my_table.join(
         {description = "surf web browser" , group = "gui apps" }),
 
     -- screenshots
-    awful.key({ }, "Print", function () awful.util.spawn("scrot 'ArcoLinuxD-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'") end,
-        {description = "Scrot", group = "screenshots"}),
-    awful.key({ modkey1           }, "Print", function () awful.util.spawn( "gnome-screenshot" ) end,
-        {description = "Spectacle", group = "screenshots"}),
-    awful.key({ modkey1, "Shift"  }, "Print", function() awful.util.spawn("gnome-screenshot") end,
-        {description = "Spectacle", group = "screenshots"}),
+    awful.key({ }, "Print", function () awful.util.spawn("gnome-screenshot") end,
+        {description = "Gnome Screenshot", group = "screenshots"}),
+    awful.key({ modkey           }, "Print", function () awful.util.spawn( "gnome-screenshot" ) end,
+        {description = "Gnome Screenshot", group = "screenshots"}),
+    awful.key({ modkey, "Shift"  }, "Print", function() awful.util.spawn("gnome-screenshot") end,
+        {description = "Gnome Screenshot", group = "screenshots"}),
 
     -- Personal keybindings}}}
 
@@ -509,11 +525,21 @@ globalkeys = my_table.join(
               {description = 'quit awesome', group = 'awesome'}),
     
     --Lockscreen
+    -- awful.key(
+    --     {modkey},
+    --         'y',
+    --     function()
+    --         awful.spawn(scrlocker)
+    --     end,
+    --             {description = 'Lock the screen', group = 'awesome'}
+    --         ),
+
+        --Power Menu
     awful.key(
         {modkey},
             'y',
         function()
-            awful.spawn(scrlocker)
+            os.execute("sh ~/.config/rofi/applets/menu/powermenu.sh")
         end,
                 {description = 'Lock the screen', group = 'awesome'}
             ),
@@ -755,7 +781,7 @@ awful.rules.rules = {
 
     -- Titlebars
     { rule_any = { type = { "dialog", "normal" } },
-      properties = { titlebars_enabled = false } },
+      properties = { titlebars_enabled = false,  floating = false , maximized = false } },
 
     -- Set applications to always map on the tag 1 on screen 1.
     -- find class or role via xprop command
@@ -793,6 +819,8 @@ awful.rules.rules = {
 
     -- { rule = { class = "Vlc" },
     --       properties = { maximized = true } },
+
+
 
     { rule = { class = "VirtualBox Manager" },
           properties = { maximized = true } },
@@ -938,11 +966,16 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nm-applet")
+awful.spawn.with_shell("pa-applet")
 -- awful.spawn.with_shell("blueman-tray")
 awful.spawn.with_shell("volumeicon")
- awful.spawn.with_shell("redshift")
+--  awful.spawn.with_shell("redshift")
 awful.spawn.with_shell("flameshot")
-awful.spawn.with_shell("xset r rate 400 97")
+awful.spawn.with_shell("xset r rate 400 60")
+-- FOR EXTERNAL SAMSUNG MONITOR
+-- os.execute("sh ~/.screenlayout/samsungMonitor.sh")
+os.execute("sh ~/.screenlayout/rightAcerMonitor.sh")
+
 --awful.spawn.with_shell("libinput-gestures-setup start")
 --
 --

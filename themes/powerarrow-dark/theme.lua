@@ -15,23 +15,23 @@ theme.font                                      = "Terminus 10"
 theme.fg_normal                                 = "#DDDDFF"
 theme.fg_focus                                  = "#EA6F81"
 theme.fg_urgent                                 = "#CC9393"
-theme.bg_normal                                 = "#272822"         --Layout Taskbar
+theme.bg_normal                                 = "#151b1e"         --Layout Taskbar
 -- theme.bg_normal                                 = "#1A1A1A"
-theme.temp_color    = "#272822"        -- LayoutBox Color due to crimson overlay
-theme.bg_focus                                  = "#272822"    -- TagList overlay color
+theme.temp_color    = "#151b1e"        -- LayoutBox Color due to crimson overlay
+theme.bg_focus                                  = "#151b1e"    -- TagList overlay color
 -- theme.bg_focus                                  = "#313131"
-theme.bg_urgent                                 = "#272822"
+theme.bg_urgent                                 = "#151b1e"
 -- theme.bg_urgent                                 = "#1A1A1A"
 
 
 -- theme.border_width                              = dpi(2)
 theme.border_width                              = 2
 theme.border_normal                             = "#3F3F3F"
--- theme.border_normal                             = "#272822"
+-- theme.border_normal                             = "#151b1e"
 -- theme.border_focus                              = "#7F7F7F"
 theme.border_focus                              = "#CC9393"
 theme.border_marked                             = "#CC9393"
-theme.tasklist_bg_focus                         = "#272822"
+theme.tasklist_bg_focus                         = "#151b1e"
 -- theme.tasklist_bg_focus                         = "#1A1A1A"
 
 theme.titlebar_bg_focus                         = theme.bg_focus
@@ -39,8 +39,8 @@ theme.titlebar_bg_normal                        = theme.bg_normal
 theme.titlebar_fg_focus                         = theme.fg_focus
 -- theme.menu_height                               = dpi(16)
 -- theme.menu_width                                = dpi(140)
-theme.menu_height                               = 18
-theme.menu_width                                = 180
+theme.menu_height                               = 20
+theme.menu_width                                = 200
 theme.menu_submenu_icon                         = theme.dir .. "/icons/submenu.png"
 theme.taglist_squares_sel                       = theme.dir .. "/icons/square_sel.png"
 theme.taglist_squares_unsel                     = theme.dir .. "/icons/square_unsel.png"
@@ -113,7 +113,7 @@ local clock = awful.widget.watch(
 theme.cal = lain.widget.cal({
     attach_to = { clock },
     notification_preset = {
-        font = "Terminus 9",
+        font = "Terminus 10",
         fg   = theme.fg_normal,
         bg   = theme.bg_normal
     }
@@ -273,7 +273,7 @@ local net = lain.widget.net({
 })
 
 -- Separators
-local spr     = wibox.widget.textbox(' ')
+local spr     = wibox.widget.textbox('┃')
 local arrl_dl = separators.arrow_left(theme.bg_focus, "alpha")
 local arrl_ld = separators.arrow_left("alpha", theme.bg_focus)
 
@@ -309,7 +309,7 @@ function theme.at_screen_connect(s)
     s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons)
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(18), bg = theme.bg_normal, fg = theme.fg_normal })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(20), bg = theme.bg_normal, fg = theme.fg_normal })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -319,7 +319,7 @@ function theme.at_screen_connect(s)
             --spr,
             s.mytaglist,
             s.mypromptbox,
-            spr,
+            
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
@@ -327,7 +327,7 @@ function theme.at_screen_connect(s)
             wibox.widget.systray(),
             -- keyboardlayout,
             spr,
-            
+
             -- arrl_ld,
             -- wibox.container.background(mpdicon, theme.bg_focus),
             -- wibox.container.background(theme.mpd.widget, theme.bg_focus),
@@ -336,26 +336,35 @@ function theme.at_screen_connect(s)
             -- arrl_dl,
             -- arrl_ld,
             -- arrl_dl,
-            volicon,
-            theme.volume.widget,
+            -- volicon,
+            -- theme.volume.widget,
+            spr,
+            
             -- arrl_ld,
             -- wibox.container.background(mailicon, theme.bg_focus),
             --wibox.container.background(theme.mail.widget, theme.bg_focus),
             -- arrl_dl,
-            -- memicon,
-            -- mem.widget,
+            memicon,
+            mem.widget,
+            spr,
+            
             -- arrl_ld,
-            -- wibox.container.background(cpuicon, theme.bg_focus),
-            -- wibox.container.background(cpu.widget, theme.bg_focus),
+            wibox.container.background(cpuicon, theme.bg_focus),
+            wibox.container.background(cpu.widget, theme.bg_focus),
+            spr,
+            
             -- arrl_dl,
-            -- tempicon,
-            -- temp.widget,
+            tempicon,
+            temp.widget,
+            spr,
+            
             -- arrl_ld,
             -- wibox.container.background(fsicon, theme.bg_focus),
             --wibox.container.background(theme.fs.widget, theme.bg_focus),
             -- arrl_dl,
             baticon,
             bat.widget,
+            
             -- arrl_ld,
             -- wibox.container.background(neticon, theme.bg_focus),
             -- wibox.container.background(net.widget, theme.bg_focus),
@@ -365,7 +374,7 @@ function theme.at_screen_connect(s)
             -- arrl_ld,
             -- arrl_dl,
             clock,
-            spr,
+            
             -- arrl_ld,
             -- arrl_dl,
             -- wibox.container.background(s.mylayoutbox, theme.bg_focus),
