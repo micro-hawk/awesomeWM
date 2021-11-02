@@ -108,14 +108,15 @@ local modkey1      = "Control"
 
 -- personal variables
 --change these variables if you want
-local browser           = "brave"
+local browser           = "firefox"
 local editor            = os.getenv("EDITOR") or "nano"
 local editorgui         = "code"
 local filemanager       = "thunar"
 local mailclient        = "geary"
 local mediaplayer       = "vlc"
 local scrlocker         = "i3lock-fancy"
-local terminal          = "st -f consolas"
+-- local terminal          = "st -f consolas"
+local terminal          = "alacritty"
 local virtualmachine    = "virtualbox"
 
 -- awesome variables
@@ -332,7 +333,7 @@ globalkeys = my_table.join(
     awful.key({ modkey,  }, "e", function () awful.util.spawn( "thunar" ) end,
         {description = "Default File Manager" , group = "gui apps" }),
     
-    awful.key({ modkey, "Shift" }, "w", function () awful.util.spawn( "brave" ) end,
+    awful.key({ modkey, "Shift" }, "w", function () awful.util.spawn( "firefox" ) end,
         {description = "surf web browser" , group = "gui apps" }),
 
     -- screenshots
@@ -966,9 +967,10 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("pa-applet")
+-- awful.spawn.with_shell("pa-applet")
+awful.spawn.with_shell("pasystray")
 -- awful.spawn.with_shell("blueman-tray")
-awful.spawn.with_shell("volumeicon")
+-- awful.spawn.with_shell("volumeicon")
 --  awful.spawn.with_shell("redshift")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("xset r rate 400 60")

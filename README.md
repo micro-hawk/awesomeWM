@@ -1,15 +1,9 @@
 # My Awesome Configuration
 
-## NOTE: It is fully tested on ARCH LINUX by MICROHAWK.
-
-![Screenshot of my desktop](/screenshots/.img0.png)
-### <<<<<<<<<< My personal fav powerarrow-dark >>>>>>>>>>
+![Screenshot of my desktop](/.screenshots/1.jpg)
 
 
-![Screenshot of my desktop](/screenshots/.img1.png)
-![Screenshot of my desktop](/screenshots/.img3.png)
-![Screenshot of my desktop](/screenshots/.img4.png)
-![Screenshot of my desktop](/screenshots/.img5.png)
+![Screenshot of my desktop](/.screenshots/2.png)
 
 
 
@@ -24,12 +18,20 @@ Awesome is a highly configurable, tiling window manager for X. It is very fast, 
 
 # Installation
 
-* sudo pacman -S awesome dmenu thunar chromium 
-* paru -S i3lock-fancy-git st-distrotube-git
-
+```bash
+sudo pacman -S awesome dmenu rofi thunar firefox alarcritty
+paru -S i3lock-fancy-git
+```
 # Additional tools for Customizing it.
 
-* sudo pacman -S lxappearance picom nitrogen
+```bash
+sudo pacman -S lxappearance picom nitrogen
+```
+* For Fonts Im using Terminus
+```bash
+sudo pacman -S terminus-font 
+paru -S consolas-font
+```
 
 # My Keybindings
 
@@ -38,8 +40,8 @@ keybindings consistent with all of my window managers.
 
 | Keybinding | Action |
 | :--- | :--- |
-| `MODKEY + RETURN` | opens terminal (ST is the terminal but can be easily changed) |
-| `MODKEY + x` | opens run launcher (dmenu is the run launcher but can be easily changed) |
+| `MODKEY + RETURN` | opens terminal (Alarcritty is the terminal but can be easily changed) |
+| `MODKEY + x` | opens run launcher (rofi (random) is the run launcher but can be easily changed) |
 | `MODKEY + SHIFT + c` | closes window with focus |
 | `MODKEY + SHIFT + r` | restarts awesome |
 | `MODKEY + CTRL + q` | quits awesome |
@@ -93,11 +95,6 @@ Online documentation is available [here](https://awesomewm.org/apidoc/).
 
 The project is licensed under GNU General Public License v2 or later.
 You can read it online at ([v2](http://www.gnu.org/licenses/gpl-2.0.html) or [v3](http://www.gnu.org/licenses/gpl.html)).
-
-
-# Thanks
-   ###### $->MICROHAWK
-        
 
     
     
