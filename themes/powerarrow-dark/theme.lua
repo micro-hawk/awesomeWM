@@ -11,13 +11,13 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-dark"
 theme.wallpaper                                 = theme.dir .. "/wall.jpg"
-theme.font                                      = "Terminus 10"
+theme.font                                      = "Source Code Pro 10"
 theme.fg_normal                                 = "#DDDDFF"
 theme.fg_focus                                  = "#EA6F81"
 theme.fg_urgent                                 = "#CC9393"
 theme.bg_normal                                 = "#151b1e"         --Layout Taskbar
 -- theme.bg_normal                                 = "#1A1A1A"
-theme.temp_color    = "#151b1e"        -- LayoutBox Color due to crimson overlay
+theme.temp_color                                = "#151b1e"        -- LayoutBox Color due to crimson overlay
 theme.bg_focus                                  = "#151b1e"    -- TagList overlay color
 -- theme.bg_focus                                  = "#313131"
 theme.bg_urgent                                 = "#151b1e"
@@ -75,7 +75,7 @@ theme.widget_mail                               = theme.dir .. "/icons/mail.png"
 theme.widget_mail_on                            = theme.dir .. "/icons/mail_on.png"
 theme.tasklist_plain_task_name                  = true
 theme.tasklist_disable_icon                     = true
-theme.useless_gap                               = dpi(4)
+theme.useless_gap                               = dpi(5)
 theme.titlebar_close_button_focus               = theme.dir .. "/icons/titlebar/close_focus.png"
 theme.titlebar_close_button_normal              = theme.dir .. "/icons/titlebar/close_normal.png"
 theme.titlebar_ontop_button_focus_active        = theme.dir .. "/icons/titlebar/ontop_focus_active.png"
@@ -103,7 +103,7 @@ local keyboardlayout = awful.widget.keyboardlayout:new()
 -- Textclock
 local clockicon = wibox.widget.imagebox(theme.widget_clock)
 local clock = awful.widget.watch(
-    "date +'%a %d %b %R'", 60,
+    "date +'%a %d %R'", 60,
     function(widget, stdout)
         widget:set_markup(" " .. markup.font(theme.font, stdout))
     end
@@ -113,7 +113,7 @@ local clock = awful.widget.watch(
 theme.cal = lain.widget.cal({
     attach_to = { clock },
     notification_preset = {
-        font = "Terminus 10",
+        font = "Source Code Pro 10",
         fg   = theme.fg_normal,
         bg   = theme.bg_normal
     }
@@ -204,7 +204,7 @@ local temp = lain.widget.temp({
 local fsicon = wibox.widget.imagebox(theme.widget_hdd)
 --[[ commented because it needs Gio/Glib >= 2.54
 theme.fs = lain.widget.fs({
-    notification_preset = { fg = theme.fg_normal, bg = theme.bg_normal, font = "Terminus 10" },
+    notification_preset = { fg = theme.fg_normal, bg = theme.bg_normal, font = "Source Code Pro 10" },
     settings = function()
         widget:set_markup(markup.font(theme.font, " " .. fs_now["/"].percentage .. "% "))
     end
@@ -274,6 +274,7 @@ local net = lain.widget.net({
 
 -- Separators
 local spr     = wibox.widget.textbox('┃')
+local space     = wibox.widget.textbox('  ')
 local arrl_dl = separators.arrow_left(theme.bg_focus, "alpha")
 local arrl_ld = separators.arrow_left("alpha", theme.bg_focus)
 
@@ -309,7 +310,7 @@ function theme.at_screen_connect(s)
     s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons)
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(20), bg = theme.bg_normal, fg = theme.fg_normal })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(25), bg = theme.bg_normal, fg = theme.fg_normal })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -318,6 +319,9 @@ function theme.at_screen_connect(s)
             layout = wibox.layout.fixed.horizontal,
             --spr,
             s.mytaglist,
+            space,
+            space,
+            space,
             s.mypromptbox,
             
         },
@@ -326,7 +330,8 @@ function theme.at_screen_connect(s)
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
             -- keyboardlayout,
-            spr,
+            space,
+            space,
 
             -- arrl_ld,
             -- wibox.container.background(mpdicon, theme.bg_focus),
@@ -338,7 +343,7 @@ function theme.at_screen_connect(s)
             -- arrl_dl,
             -- volicon,
             -- theme.volume.widget,
-            spr,
+            
             
             -- arrl_ld,
             -- wibox.container.background(mailicon, theme.bg_focus),
@@ -349,14 +354,14 @@ function theme.at_screen_connect(s)
             spr,
             
             -- arrl_ld,
-            wibox.container.background(cpuicon, theme.bg_focus),
-            wibox.container.background(cpu.widget, theme.bg_focus),
-            spr,
+            -- wibox.container.background(cpuicon, theme.bg_focus),
+            -- wibox.container.background(cpu.widget, theme.bg_focus),
+            -- spr,
             
             -- arrl_dl,
-            tempicon,
-            temp.widget,
-            spr,
+            -- tempicon,
+            -- temp.widget,
+            -- spr,
             
             -- arrl_ld,
             -- wibox.container.background(fsicon, theme.bg_focus),

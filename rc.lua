@@ -121,8 +121,14 @@ local virtualmachine    = "virtualbox"
 
 -- awesome variables
 awful.util.terminal = terminal
--- awful.util.tagnames = {" 💩", " 👻", " 💀", " 👽", " ☠️" }
-awful.util.tagnames = {" ◉", " ◉", " ◉", " ◉", " ◉" }
+-- awful.util.tagnames = {" ", " ", " ", " ", " " }
+-- awful.util.tagnames = {" ◉", " ◉", " ◉", " ◉", " ◉" }
+-- awful.util.tagnames = {" 𝕎𝕎𝕎", " 𝔻𝔼𝕍", " 𝕋𝔼ℝ𝕄", " 𝔽𝕀𝕃𝔼", " 𝔹𝕃𝔸ℍ" }
+
+-- https://fsymbols.com/generators/blocky/
+awful.util.tagnames = {" 🆆🆆🆆", " 🅳🅴🆅", " 🆃🅴🆁🅼", " 🅵🅸🅻🅴", " 🆂🅷🅸🆃" }
+
+
 -- awful.util.tagnames = {" α  👻", " β  💀", " γ  🧠", " δ  👾", " ζ  🙀" }
 -- awful.util.tagnames = { " 1", " 2", " 3", " 4", " 5"}
 awful.layout.suit.tile.left.mirror = true
