@@ -1,5 +1,7 @@
 # My Awesome Configuration
 
+![Screenshot of my desktop](/.screenshots/3.png)
+
 ![Screenshot of my desktop](/.screenshots/1.jpg)
 
 
@@ -19,17 +21,23 @@ Awesome is a highly configurable, tiling window manager for X. It is very fast, 
 # Installation
 
 ```bash
-sudo pacman -S awesome dmenu rofi thunar firefox alarcritty
-paru -S i3lock-fancy-git
+sudo pacman -S awesome dmenu rofi thunar firefox alacritty
+```
+
+```bash
+paru -S i3lock-fancy-git picom-ibhagwan-git
 ```
 # Additional tools for Customizing it.
 
 ```bash
-sudo pacman -S lxappearance picom nitrogen
+sudo pacman -S lxappearance nitrogen
 ```
 * For Fonts Im using Terminus
 ```bash
 sudo pacman -S terminus-font 
+```
+
+```bash
 paru -S consolas-font
 ```
 
